@@ -79,22 +79,22 @@ This system serves multiple stakeholders in the healthcare ecosystem:
 ## 📸 Visual Walkthrough
 
 ### Pipeline Execution
-<img src="docs/images/pipeline-execution.png" alt="ETL Pipeline Running" width="600"/>
+<img src="pipeline-execution.png" alt="ETL Pipeline Running" width="600"/>
 
 *ETL pipeline processing 10,000 NIH records with progress logging*
 
 ### Database Schema
-<img src="docs/images/database-tables.png" alt="Database Tables" width="600"/>
+<img src="database-tables.png" alt="Database Tables" width="600"/>
 
 *Complete 14-table architecture (7 operational + 7 warehouse)*
 
 ### QA Validation
-<img src="docs/images/qa-validation.png" alt="Quality Assurance" width="600"/>
+<img src="qa-validation.png" alt="Quality Assurance" width="600"/>
 
 *All 9 automated validation checks passing*
 
 ### Analytics Results
-<img src="docs/images/query-results.png" alt="Query Results" width="600"/>
+<img src="query-results.png" alt="Query Results" width="600"/>
 
 *Sample business intelligence query output*
 
