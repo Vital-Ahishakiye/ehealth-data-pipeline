@@ -1,0 +1,8 @@
+"table_name","record_count"
+"diagnoses","50"
+"encounter_diagnoses","11064"
+"encounters","10000"
+"facilities","500"
+"patients","6853"
+"procedures","10000"
+"reports","10000"

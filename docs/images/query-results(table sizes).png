@@ -1,0 +1,8 @@
+"schemaname","tablename","size"
+"public","reports","15 MB"
+"public","procedures","3704 kB"
+"public","encounter_diagnoses","3368 kB"
+"public","encounters","3320 kB"
+"public","patients","2160 kB"
+"public","facilities","256 kB"
+"public","diagnoses","112 kB"

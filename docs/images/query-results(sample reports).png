@@ -1,0 +1,31 @@
+"report_id","report_type","report_status","diagnosis_name","severity","report_sample"
+16060,"Diagnostic Report","Preliminary","Abnormal Lung Finding","Mild","CLINICAL HISTORY: 53-year-old male with pre-operative clearance.
+
+TECHNIQUE: Single frontal chest radiograph, posteroanterior (PA) view.
+
+FINDINGS:
+Ca"
+10690,"Radiology Report","Amended","Lobar Pneumonia","Moderate","CLINICAL HISTORY: 44-year-old male with chest pain.
+
+TECHNIQUE: Single frontal chest radiograph, anteroposterior (AP) view.
+
+FINDINGS:
+Cardiac silhoue"
+14141,"Diagnostic Report","Final",NULL,NULL,"CLINICAL HISTORY: 38-year-old female with postoperative.
+
+TECHNIQUE: Single frontal chest radiograph, anteroposterior (AP) view.
+
+FINDINGS:
+Subsegment"
+18302,"Radiology Report","Amended",NULL,NULL,"CLINICAL HISTORY: 55-year-old female with dyspnea on exertion.
+
+TECHNIQUE: Single frontal chest radiograph, posteroanterior (PA) view.
+
+FINDINGS:
+Enla"
+17582,"Preliminary Report","Final","Abnormal Lung Finding","Mild","CLINICAL HISTORY: 52-year-old female with chest pain.
+
+TECHNIQUE: Single frontal chest radiograph, posteroanterior (PA) view.
+
+FINDINGS:
+No acute card"

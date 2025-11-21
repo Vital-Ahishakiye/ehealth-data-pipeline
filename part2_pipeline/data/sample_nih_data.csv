@@ -1,0 +1,101 @@
+Image Index,Finding Labels,Follow-up #,Patient ID,Patient Age,Patient Gender,View Position,OriginalImage[Width,Height],OriginalImagePixelSpacing[x,y],report_text,findings,impression,recommendations,report_type,report_status
+00022260_003.png,No Finding,3,22260,54,F,PA,2542,2434,0.143,0.143,"CLINICAL HISTORY: 54-year-old female with pre-operative clearance.
+
+TECHNIQUE: Single frontal chest radiograph, posteroanterior (PA) view.
+
+FINDINGS:
+Lungs are clear without focal consolidation, effusion, or pneumothorax. Heart size is within normal limits. Mediastinal contours are unremarkable. Osseous structures are intact.
+
+IMPRESSION:
+Normal chest radiograph.
+
+RECOMMENDATIONS: No follow-up imaging required unless clinically indicated.","Lungs are clear without focal consolidation, effusion, or pneumothorax. Heart size is within normal limits. Mediastinal contours are unremarkable. Osseous structures are intact.",Normal chest radiograph.,RECOMMENDATIONS: No follow-up imaging required unless clinically indicated.,Radiology Report,Final
+00012048_007.png,Infiltration|Mass|Nodule,7,12048,64,M,AP,2500,2048,0.168,0.168,"CLINICAL HISTORY: 64-year-old male with chest pain.
+
+TECHNIQUE: Single frontal chest radiograph, anteroposterior (AP) view.
+
+FINDINGS:
+No acute cardiopulmonary abnormality detected. Heart size is within normal limits. Mediastinal contours are unremarkable. Osseous structures are intact.
+
+IMPRESSION:
+No acute cardiopulmonary process.
+
+RECOMMENDATIONS: Clinical correlation advised.",No acute cardiopulmonary abnormality detected. Heart size is within normal limits. Mediastinal contours are unremarkable. Osseous structures are intact.,No acute cardiopulmonary process.,RECOMMENDATIONS: Clinical correlation advised.,Radiology Report,Final
+00014352_005.png,No Finding,5,14352,6,M,PA,2992,2033,0.143,0.143,"CLINICAL HISTORY: 6-year-old male with pre-operative clearance.
+
+TECHNIQUE: Single frontal chest radiograph, posteroanterior (PA) view.
+
+FINDINGS:
+Lungs are clear without focal consolidation, effusion, or pneumothorax. Heart size is within normal limits. Mediastinal contours are unremarkable. Osseous structures are intact.
+
+IMPRESSION:
+Clear lungs, no acute findings.
+
+RECOMMENDATIONS: No follow-up imaging required unless clinically indicated.","Lungs are clear without focal consolidation, effusion, or pneumothorax. Heart size is within normal limits. Mediastinal contours are unremarkable. Osseous structures are intact.","Clear lungs, no acute findings.",RECOMMENDATIONS: No follow-up imaging required unless clinically indicated.,Radiology Report,Amended
+00006040_002.png,No Finding,1,6040,17,F,PA,2048,2500,0.171,0.171,"CLINICAL HISTORY: 17-year-old female with pre-operative clearance.
+
+TECHNIQUE: Single frontal chest radiograph, posteroanterior (PA) view.
+
+FINDINGS:
+Cardiac silhouette is normal in size and contour. Heart size is within normal limits. Mediastinal contours are unremarkable. Osseous structures are intact.
+
+IMPRESSION:
+Clear lungs, no acute findings.
+
+RECOMMENDATIONS: No follow-up imaging required unless clinically indicated.",Cardiac silhouette is normal in size and contour. Heart size is within normal limits. Mediastinal contours are unremarkable. Osseous structures are intact.,"Clear lungs, no acute findings.",RECOMMENDATIONS: No follow-up imaging required unless clinically indicated.,Preliminary Report,Final
+00011202_002.png,No Finding,2,11202,18,M,AP,2500,2048,0.168,0.168,"CLINICAL HISTORY: 18-year-old male with routine examination.
+
+TECHNIQUE: Single frontal chest radiograph, anteroposterior (AP) view.
+
+FINDINGS:
+Cardiac silhouette is normal in size and contour. Heart size is within normal limits. Mediastinal contours are unremarkable. Osseous structures are intact.
+
+IMPRESSION:
+Normal chest radiograph.
+
+RECOMMENDATIONS: No follow-up imaging required unless clinically indicated.",Cardiac silhouette is normal in size and contour. Heart size is within normal limits. Mediastinal contours are unremarkable. Osseous structures are intact.,Normal chest radiograph.,RECOMMENDATIONS: No follow-up imaging required unless clinically indicated.,Preliminary Report,Preliminary
+00002275_007.png,Emphysema|Infiltration|Pneumothorax,7,2275,62,M,PA,2500,2048,0.171,0.171,"CLINICAL HISTORY: 62-year-old male with chest pain.
+
+TECHNIQUE: Single frontal chest radiograph, posteroanterior (PA) view.
+
+FINDINGS:
+No acute cardiopulmonary abnormality detected. Absence of lung markings in the left upper lobe with visible visceral pleural line. Heart size is within normal limits. Mediastinal contours are unremarkable. Osseous structures are intact.
+
+IMPRESSION:
+Normal chest radiograph.
+
+RECOMMENDATIONS: Clinical correlation advised.",No acute cardiopulmonary abnormality detected. Absence of lung markings in the left upper lobe with visible visceral pleural line. Heart size is within normal limits. Mediastinal contours are unremarkable. Osseous structures are intact.,Normal chest radiograph.,RECOMMENDATIONS: Clinical correlation advised.,Preliminary Report,Preliminary
+00003446_008.png,No Finding,8,3446,49,M,AP,2500,2048,0.171,0.171,"CLINICAL HISTORY: 49-year-old male with pre-operative clearance.
+
+TECHNIQUE: Single frontal chest radiograph, anteroposterior (AP) view.
+
+FINDINGS:
+Lungs are clear without focal consolidation, effusion, or pneumothorax. Heart size is within normal limits. Mediastinal contours are unremarkable. Osseous structures are intact.
+
+IMPRESSION:
+No acute cardiopulmonary process.
+
+RECOMMENDATIONS: No follow-up imaging required unless clinically indicated.","Lungs are clear without focal consolidation, effusion, or pneumothorax. Heart size is within normal limits. Mediastinal contours are unremarkable. Osseous structures are intact.",No acute cardiopulmonary process.,RECOMMENDATIONS: No follow-up imaging required unless clinically indicated.,Preliminary Report,Final
+00030350_000.png,Atelectasis,0,30350,24,M,PA,2021,2020,0.1943109999999999,0.1943109999999999,"CLINICAL HISTORY: 24-year-old male with postoperative.
+
+TECHNIQUE: Single frontal chest radiograph, posteroanterior (PA) view.
+
+FINDINGS:
+Volume loss in the left upper lobe with linear opacities. Heart size is within normal limits. Mediastinal contours are unremarkable. Osseous structures are intact.
+
+IMPRESSION:
+Mild atelectasis without infiltrate.
+
+RECOMMENDATIONS: Recommend incentive spirometry and repeat imaging if clinically indicated.",Volume loss in the left upper lobe with linear opacities. Heart size is within normal limits. Mediastinal contours are unremarkable. Osseous structures are intact.,Mild atelectasis without infiltrate.,RECOMMENDATIONS: Recommend incentive spirometry and repeat imaging if clinically indicated.,Radiology Report,Preliminary
+00004640_000.png,No Finding,0,4640,36,F,PA,2048,2500,0.171,0.171,"CLINICAL HISTORY: 36-year-old female with chest pain.
+
+TECHNIQUE: Single frontal chest radiograph, posteroanterior (PA) view.
+
+FINDINGS:
+Lungs are clear without focal consolidation, effusion, or pneumothorax. Heart size is within normal limits. Mediastinal contours are unremarkable. Osseous structures are intact.
+
+IMPRESSION:
+Clear lungs, no acute findings.
+
+RECOMMENDATIONS: No follow-up imaging required unless clinically indicated.","Lungs are clear without focal consolidation, effusion, or pneumothorax. Heart size is within normal limits. Mediastinal contours are unremarkable. Osseous structures are intact.","Clear lungs, no acute findings.",RECOMMENDATIONS: No follow-up imaging required unless clinically indicated.,Radiology Report,Final
+00008858_007.png,Effusion,7,8858,49,F,AP,2500,2048,0.168,0.168,"CLINICAL HISTORY: 49-year-old female with pleuritic chest pain.

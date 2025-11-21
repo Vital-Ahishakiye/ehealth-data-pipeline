@@ -1,0 +1,45 @@
+2025-11-16 20:20:41,518 - Warehouse Population - INFO - ============================================================
+2025-11-16 20:20:41,518 - Warehouse Population - INFO - Starting Pipeline: Warehouse Population
+2025-11-16 20:20:41,518 - Warehouse Population - INFO - ============================================================
+2025-11-16 20:20:41,518 - Warehouse Population - INFO - Starting Data Warehouse Population...
+2025-11-16 20:20:41,575 - Warehouse Population - INFO -   Clearing existing warehouse data...
+2025-11-16 20:20:41,668 - Warehouse Population - INFO -     Warehouse cleared
+2025-11-16 20:20:41,668 - Warehouse Population - INFO - 
+Populating dim_time...
+2025-11-16 20:20:41,713 - Warehouse Population - INFO -    Inserted 732 time records
+2025-11-16 20:20:41,713 - Warehouse Population - INFO - 
+Populating dim_patient...
+2025-11-16 20:20:41,791 - Warehouse Population - INFO -    Dim patient rows: 6,853
+2025-11-16 20:20:41,808 - Warehouse Population - INFO - 
+Populating dim_procedure...
+2025-11-16 20:20:41,887 - Warehouse Population - INFO -    Dim procedure rows: 10,000
+2025-11-16 20:20:41,892 - Warehouse Population - INFO - 
+Populating dim_diagnosis...
+2025-11-16 20:20:41,897 - Warehouse Population - INFO -    Dim diagnosis rows: 50
+2025-11-16 20:20:41,897 - Warehouse Population - INFO - 
+Populating fact_encounters...
+2025-11-16 20:20:42,139 - Warehouse Population - INFO -    Fact encounters rows: 10,000
+2025-11-16 20:20:42,157 - Warehouse Population - INFO - 
+Populating bridge_encounter_procedures...
+2025-11-16 20:20:42,325 - Warehouse Population - INFO -    Bridge procedures rows: 10,000
+2025-11-16 20:20:42,339 - Warehouse Population - INFO - 
+Populating bridge_encounter_diagnoses...
+2025-11-16 20:20:42,605 - Warehouse Population - INFO -    Bridge diagnoses rows: 11,064
+2025-11-16 20:20:42,605 - Warehouse Population - INFO - 
+============================================================
+2025-11-16 20:20:42,605 - Warehouse Population - INFO - WAREHOUSE POPULATION SUMMARY
+2025-11-16 20:20:42,605 - Warehouse Population - INFO - ============================================================
+2025-11-16 20:20:42,605 - Warehouse Population - INFO -    Dim Time Records........................        732
+2025-11-16 20:20:42,605 - Warehouse Population - INFO -    Dim Patient Records.....................      6,853
+2025-11-16 20:20:42,605 - Warehouse Population - INFO -    Dim Procedure Records...................     10,000
+2025-11-16 20:20:42,605 - Warehouse Population - INFO -    Dim Diagnosis Records...................         50
+2025-11-16 20:20:42,605 - Warehouse Population - INFO -    Fact Encounters Records.................     10,000
+2025-11-16 20:20:42,605 - Warehouse Population - INFO -    Bridge Procedures Records...............     10,000
+2025-11-16 20:20:42,605 - Warehouse Population - INFO -    Bridge Diagnoses Records................     11,064
+2025-11-16 20:20:42,605 - Warehouse Population - INFO - ============================================================
+2025-11-16 20:20:42,605 - Warehouse Population - INFO - 
+Data warehouse populated successfully!
+2025-11-16 20:20:42,605 - Warehouse Population - INFO - ============================================================
+2025-11-16 20:20:42,605 - Warehouse Population - INFO - Pipeline Completed Successfully
+2025-11-16 20:20:42,605 - Warehouse Population - INFO - Duration: 0:00:01.086753
+2025-11-16 20:20:42,605 - Warehouse Population - INFO - ============================================================
