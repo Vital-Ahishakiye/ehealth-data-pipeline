@@ -79,20 +79,25 @@ This system serves multiple stakeholders in the healthcare ecosystem:
 ## 📸 Visual Walkthrough
 
 ### Pipeline Execution
-![ETL Pipeline Running](https://github.com/Vital-Ahishakiye/ehealth-data-pipeline/blob/main/docs/images/pipeline-execution.png)
+<img src="docs/images/pipeline-execution.png" alt="ETL Pipeline Running" width="600"/>
+
 *ETL pipeline processing 10,000 NIH records with progress logging*
 
 ### Database Schema
-![Database Tables](https://github.com/Vital-Ahishakiye/ehealth-data-pipeline/blob/main/docs/images/database-tables.png)
+<img src="docs/images/database-tables.png" alt="Database Tables" width="600"/>
+
 *Complete 14-table architecture (7 operational + 7 warehouse)*
 
 ### QA Validation
-![Quality Assurance](https://github.com/Vital-Ahishakiye/ehealth-data-pipeline/blob/main/docs/images/qa-validation.png)
+<img src="docs/images/qa-validation.png" alt="Quality Assurance" width="600"/>
+
 *All 9 automated validation checks passing*
 
 ### Analytics Results
-![Query Results](query-results(facility_distribution_by_type).png)
+<img src="docs/images/query-results.png" alt="Query Results" width="600"/>
+
 *Sample business intelligence query output*
+
 
 ---
 ## ✨ Key Features
