@@ -79,7 +79,7 @@ This system serves multiple stakeholders in the healthcare ecosystem:
 ## 📸 Visual Walkthrough
 
 ### Pipeline Execution
-![ETL Pipeline Running](docs/images/pipeline-execution.png)
+![ETL Pipeline Running](pipeline-execution.png)
 *ETL pipeline processing 10,000 NIH records with progress logging*
 
 ### Database Schema
