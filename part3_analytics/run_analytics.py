@@ -7,13 +7,9 @@ import sys, io
 from pathlib import Path
 import psycopg2
 import pandas as pd
-
-# Ensure project root is on sys.path
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-
-from part2_pipeline.config import DB_CONFIG
-from part2_pipeline.utils.logger import PipelineLogger
-from populate_warehouse import WarehouseETL
+from efiche_data_engineer_assessment.part2_pipeline.config import DB_CONFIG
+from efiche_data_engineer_assessment.part2_pipeline.utils.logger import PipelineLogger
+from efiche_data_engineer_assessment.part3_analytics.populate_warehouse import WarehouseETL
 
 # Force UTF-8 output for emojis/logs
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
@@ -34,13 +30,12 @@ class AnalyticsOrchestrator:
         logger.info("=" * 60)
 
         try:
-            from populate_warehouse import WarehouseETL
             etl = WarehouseETL()
             etl.run(logger)
             self.results['warehouse_population'] = 'SUCCESS'
-            logger.info("    Warehouse populated successfully")
+            logger.info("Warehouse populated successfully")
         except Exception as e:
-            logger.error(f"    Warehouse population failed: {e}")
+            logger.error(f"Warehouse population failed: {e}")
             self.results['warehouse_population'] = f'FAILED: {e}'
             raise
 

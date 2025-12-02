@@ -113,7 +113,7 @@ def verify_schema(cursor):
 def main():
     """Main execution"""
     print("\n" + "=" * 60)
-    print("🚀 eHealth Data Engineer Assessment - Schema Creation")
+    print("🚀 eFiche Data Engineer Assessment - Schema Creation")
     print("=" * 60)
     
     conn = None

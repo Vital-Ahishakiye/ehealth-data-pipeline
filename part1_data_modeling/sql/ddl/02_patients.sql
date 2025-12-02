@@ -9,7 +9,6 @@ CREATE TABLE patients (
     patient_id VARCHAR(20) PRIMARY KEY,         -- e.g., 'PAT0000001'
     date_of_birth DATE NOT NULL,
     gender VARCHAR(10) CHECK (gender IN ('M', 'F', 'Other')),
-    ethnicity VARCHAR(50),                      -- Rwanda context: optional
     primary_language VARCHAR(50),               -- Kinyarwanda, English, French, Swahili
     contact_email VARCHAR(255),
     contact_phone VARCHAR(20),

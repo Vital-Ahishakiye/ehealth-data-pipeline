@@ -7,15 +7,9 @@ import io
 from pathlib import Path
 import pandas as pd
 from collections import Counter
-from part2_pipeline.config import NIH_DATASET_NAME, NIH_DATASET_SIZE, DATA_DIR, NIH_SUBSET_NAME
-from part2_pipeline.utils.logger import PipelineLogger
+from efiche_data_engineer_assessment.part2_pipeline.config import NIH_DATASET_NAME, NIH_DATASET_SIZE, DATA_DIR, NIH_SUBSET_NAME
+from efiche_data_engineer_assessment.part2_pipeline.utils.logger import PipelineLogger
 from datasets import load_dataset
-
-
-# Add project root to path
-sys.path.insert(0, str(Path(__file__).parent))
-from part2_pipeline.config import NIH_DATASET_NAME, NIH_DATASET_SIZE, DATA_DIR, NIH_SUBSET_NAME
-from part2_pipeline.utils.logger import PipelineLogger
 
 # Force UTF-8 output for Windows console
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')

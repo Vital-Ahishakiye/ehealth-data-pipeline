@@ -6,13 +6,7 @@ Provides connection management and common database operations
 import psycopg2
 from psycopg2.extras import execute_batch
 from contextlib import contextmanager
-import sys
-from pathlib import Path
-
-# Add parent directory to path for imports
-sys.path.insert(0, str(Path(__file__).parent.parent))
-from part2_pipeline.config import DB_CONFIG
-
+from efiche_data_engineer_assessment.part2_pipeline.config import DB_CONFIG
 
 class DatabaseHelper:
     """Helper class for database operations"""

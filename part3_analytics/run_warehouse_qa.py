@@ -6,12 +6,8 @@ Generates a reviewer-friendly markdown summary of QA results.
 import sys, io
 from pathlib import Path
 import psycopg2
-
-# Run Part 3 as scripts: add project root for sibling imports
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-
-from part2_pipeline.utils.db_helper import DatabaseHelper
-from part2_pipeline.utils.logger import PipelineLogger
+from efiche_data_engineer_assessment.part2_pipeline.utils.db_helper import DatabaseHelper
+from efiche_data_engineer_assessment.part2_pipeline.utils.logger import PipelineLogger
 
 # UTF-8 stdout for clean logs
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
@@ -85,7 +81,7 @@ class WarehouseQA:
             9: "SELECT procedure_code, COUNT(*) FROM dim_procedure GROUP BY procedure_code HAVING COUNT(*) > 1;",
         }
 
-    def write_summary(self, output_path="docs\warehouse_qa_summary.md"):
+    def write_summary(self, output_path="efiche_data_engineer_assessment\part3_analytics\warehouse_qa_summary.md"):
         """Write concise markdown summary using QA_DESCRIPTIONS"""
         with open(output_path, "w", encoding="utf-8") as md:
             md.write("# Warehouse QA Results\n\n")

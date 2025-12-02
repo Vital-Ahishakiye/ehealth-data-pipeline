@@ -23,7 +23,7 @@ psql --version     # Should show 15+
 ---
 
 ## ⚡ Quick Setup (5 minutes)
-
+### Step 0: Download and unzip the project/Clone the project
 ### Step 1: Create Virtual Environment
 
 ```bash
@@ -71,7 +71,7 @@ cp .env.example .env
 # DB_PASSWORD=your_password_here
 ```
 
-**Edit `.env` file:**
+**Rename `.env.example` file to .env and edit password:**
 ```ini
 DB_HOST=localhost
 DB_PORT=5432
@@ -94,19 +94,19 @@ Execute all parts sequentially:
 
 ```bash
 # Part 1: Create schema + generate synthetic data (2 min)
-python part1_data_modeling/run_part1.py
+python -m efiche_data_engineer_assessment.part1_data_modeling.run_part1
 
 # Part 2: ETL Pipeline
-python part2_pipeline/extract_nih_dataset.py          # Download NIH (2 min)
-python part2_pipeline/generate_synthetic_reports.py   # Generate reports (3 min)
-python part2_pipeline/etl_pipeline.py                 # Load data (5-7 min)
+python -m efiche_data_engineer_assessment.part2_pipeline.utils.extract_nih_dataset    # Download NIH (1 min)
+python -m efiche_data_engineer_assessment.part2_pipeline.utils.generate_synthetic_reports # Generate reports (3 min)
+python -m efiche_data_engineer_assessment.part2_pipeline.utils.etl_pipeline       # Load data (2-3min)
 
 # Part 3: Warehouse + Analytics
-python part3_analytics/run_analytics.py               # Run analytics (2 min)
-python part3_analytics/run_warehouse_qa.py            # QA checks (30 sec)
+python -m efiche_data_engineer_assessment.part3_analytics.run_analytics    # Run analytics (less than 1 min)
+python -m efiche_data_engineer_assessment.part3_analytics.run_warehouse_qa   # QA checks (30 sec)
 ```
 
-**Total time: ~15-20 minutes**
+**Total time: ~5-9 minutes**
 
 ---
 
@@ -114,11 +114,11 @@ python part3_analytics/run_warehouse_qa.py            # QA checks (30 sec)
 
 Execute each component individually with validation:
 
-#### **PART 1: Database Schema (2 minutes)**
+#### **PART 1: Database Schema (1 minute)**
 
 ```bash
 # Create all tables
-python part1_data_modeling/create_schema.py
+python python -m efiche_data_engineer_assessment.create_schema.py
 ```
 
 **Expected output:**
@@ -154,7 +154,7 @@ psql -U postgres -d ehealth_db -c "SELECT COUNT(*) FROM patients;"
 
 ---
 
-#### **PART 2: ETL Pipeline (10-12 minutes)**
+#### **PART 2: ETL Pipeline (2-4 minutes)**
 
 ```bash
 # Step 1: Download NIH dataset
@@ -176,7 +176,7 @@ ls -lh part2_pipeline/data/nih_subset_10k.csv
 
 ```bash
 # Step 2: Generate radiology reports
-python part2_pipeline/generate_synthetic_reports.py
+python -m efiche_data_engineer_assessment.part2_pipeline.utils.generate_synthetic_reports
 ```
 
 **Expected output:**
@@ -194,7 +194,7 @@ head -5 part2_pipeline/data/nih_with_reports.csv
 
 ```bash
 # Step 3: Run ETL pipeline (incremental load)
-python part2_pipeline/etl_pipeline.py
+python -m efiche_data_engineer_assessment.part2_pipeline.utils.etl_pipeline 
 ```
 
 **Expected output:**
@@ -222,18 +222,18 @@ psql -U postgres -d ehealth_db -c "
 **Test Incremental Loading (Optional):**
 ```bash
 # Run again - should skip all duplicates
-python part2_pipeline/etl_pipeline.py
+python -m efiche_data_engineer_assessment.part2_pipeline.utils.etl_pipeline
 
 # Expected: Records Skipped: 10,000
 ```
 
 ---
 
-#### **PART 3: Warehouse & Analytics (2-3 minutes)**
+#### **PART 3: Warehouse & Analytics (1 minutes)**
 
 ```bash
 # Populate data warehouse
-python part3_analytics/populate_warehouse.py
+python -m efiche_data_engineer_assessment.part3_analytics.populate_warehouse
 ```
 
 **Expected output:**
@@ -254,7 +254,7 @@ psql -U postgres -d ehealth_db -c "SELECT COUNT(*) FROM fact_encounters;"
 
 ```bash
 # Run analytics queries
-python part3_analytics/run_analytics.py
+python -m efiche_data_engineer_assessment.part3_analytics.run_analytics 
 ```
 
 **Expected output:**
@@ -272,7 +272,7 @@ ls part3_analytics/*_results.csv
 
 ```bash
 # Run QA validation
-python part3_analytics/run_warehouse_qa.py
+python -m efiche_data_engineer_assessment.part3_analytics.run_warehouse_qa
 ```
 
 **Expected output:**
@@ -283,7 +283,7 @@ python part3_analytics/run_warehouse_qa.py
 
 **Verify:**
 ```bash
-cat part3_analytics/warehouse_qa_summary.md
+cat docs\warehouse_qa_summary.md
 # Should show all checks PASSING
 ```
 
@@ -294,7 +294,7 @@ cat part3_analytics/warehouse_qa_summary.md
 Run complete validation suite:
 
 ```bash
-# Check database state
+# Check database state via powershell or PgAdmin
 psql -U postgres -d ehealth_db -c "
   SELECT 
     'Patients' AS entity, COUNT(*) FROM patients
@@ -312,14 +312,15 @@ psql -U postgres -d ehealth_db -c "
 ```
       entity       | count
 -------------------+-------
- Patients          |  6853
+ Patients          | 11853
  Encounters        | 25000
- Procedures        | 40000
- Diagnoses         | 44000
- Reports           | 25000
- Fact Encounters   | 10000
- Dim Patient       |  6853
- Dim Procedure     | 10000
+ Procedures        | 10002
+ Diagnoses         | 41091
+ Reports           | 10002
+ Fact Encounters   | 24996
+ Dim Patient       | 11853
+ Dim Procedure     | 10002
+ 
 ```
 
 ```bash
@@ -331,7 +332,7 @@ ls -lh part3_analytics/*_results.csv
 cat part3_analytics/warehouse_qa_summary.md
 ```
 
-**✅ If all numbers match, the system is working correctly!**
+**✅ Numbers may mismatch(due to the facts that Faker generates different names, addresses, phone numbers each run), but the system is working correctly if you have numbers and have PASS in all 9 checks (Refer to your warehouse_qa_summary.md)!**
 
 ---
 

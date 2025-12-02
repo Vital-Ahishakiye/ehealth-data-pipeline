@@ -7,8 +7,6 @@ import sys
 from pathlib import Path
 import time
 from datetime import datetime
-
-sys.path.insert(0, str(Path(__file__).parent))
 from etl_pipeline import NIH_ETL_Pipeline
 from utils.db_helper import DatabaseHelper
 from utils.logger import PipelineLogger

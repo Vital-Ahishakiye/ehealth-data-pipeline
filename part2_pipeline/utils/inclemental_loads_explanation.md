@@ -304,7 +304,7 @@ python etl_pipeline.py
 python etl_pipeline.py
 
 # Check database
-psql -U postgres -d ehealth_db -c "SELECT COUNT(*) FROM procedures WHERE procedure_code LIKE 'NIH_%';"
+psql -U postgres -d efiche_db -c "SELECT COUNT(*) FROM procedures WHERE procedure_code LIKE 'NIH_%';"
 ```
 
 ---

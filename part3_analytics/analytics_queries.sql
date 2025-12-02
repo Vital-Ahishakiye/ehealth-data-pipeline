@@ -1,6 +1,6 @@
 -- ============================================================
 -- Analytics Queries - Data Warehouse Reporting
--- Purpose: Business intelligence queries for eHealth analytics
+-- Purpose: Business intelligence queries for eFiche analytics
 -- ============================================================
 
 -- ============================================================

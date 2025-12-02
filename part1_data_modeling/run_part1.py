@@ -30,7 +30,7 @@ def run_command(script_path, description):
 def main():
     """Main execution"""
     print("\n" + "="*60)
-    print("🚀 eHealth Part 1 - Complete Setup")
+    print("🚀 eFiche Part 1 - Complete Setup")
     print("   (Schema Creation + Synthetic Data Generation)")
     print("="*60)
     
@@ -53,7 +53,7 @@ def main():
     print("✅ Part 1 Setup Completed Successfully!")
     print("="*60)
     print("\n📋 Next Steps:")
-    print("   1. Review data with: psql -d ehealth_db -f part1_data_modeling/test_schema.sql")
+    print("   1. Review data with: psql -d efiche_db -f part1_data_modeling/test_schema.sql")
     print("   2. Proceed to Part 2: Data Pipeline")
     print("="*60)
 

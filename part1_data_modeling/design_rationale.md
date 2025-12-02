@@ -1,7 +1,7 @@
 # Part 1: Data Modeling - Design Rationale
 
 ## Overview
-This document explains the design decisions for the eHealth operational schema and data warehouse layer.
+This document explains the design decisions for the eFiche operational schema and data warehouse layer.
 
 ---
 

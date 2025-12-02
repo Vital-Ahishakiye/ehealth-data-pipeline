@@ -13,9 +13,9 @@ import random
 sys.path.insert(0, str(Path(__file__).parent))
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 from psycopg2.extras import execute_batch
-from part2_pipeline.config import DATA_DIR, NIH_TO_ICD10_MAPPING, MODALITY_MAPPING, BATCH_SIZE
-from part2_pipeline.utils.db_helper import DatabaseHelper
-from part2_pipeline.utils.logger import PipelineLogger
+from efiche_data_engineer_assessment.part2_pipeline.config import DATA_DIR, NIH_TO_ICD10_MAPPING, MODALITY_MAPPING, BATCH_SIZE
+from efiche_data_engineer_assessment.part2_pipeline.utils.db_helper import DatabaseHelper
+from efiche_data_engineer_assessment.part2_pipeline.utils.logger import PipelineLogger
 
 fake = Faker()
 Faker.seed(42)
@@ -63,7 +63,7 @@ class NIH_ETL_Pipeline:
         return pd.read_csv(csv_path)
     
     def transform(self, df):
-        """Transform NIH data to match eHealth schema"""
+        """Transform NIH data to match eFiche schema"""
         
         existing_indices = set()
         if self.incremental:
@@ -296,7 +296,7 @@ class NIH_ETL_Pipeline:
                 gender = "M" if row["Patient Gender"] == "M" else "F" if row["Patient Gender"] == "F" else "Other"
 
                 new_patients.append((
-                    new_patient_id, dob.date(), gender, None, "English",
+                    new_patient_id, dob.date(), gender, "English",
                     email, fake.phone_number()[:20],
                     fake.street_address()[:200], "Kigali", "Kigali Province",
                     fake.postcode()[:10], "Private Insurance",
@@ -308,10 +308,20 @@ class NIH_ETL_Pipeline:
         # Bulk insert new patients if any
         if new_patients:
             execute_batch(cursor, """
-                INSERT INTO patients (patient_id, date_of_birth, gender, ethnicity, primary_language,
-                                      contact_email, contact_phone, address_line1, address_city,
-                                      address_state, address_zipcode, insurance_provider, insurance_id, is_active)
-                VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
+                INSERT INTO patients (patient_id, 
+                                      date_of_birth, 
+                                      gender, 
+                                      primary_language,
+                                      contact_email, 
+                                      contact_phone, 
+                                      address_line1, 
+                                      address_city,
+                                      address_state,
+                                      address_zipcode, 
+                                      insurance_provider, 
+                                      insurance_id,
+                                      is_active)
+                VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
             """, new_patients, page_size=1000)
 
         return patient_map

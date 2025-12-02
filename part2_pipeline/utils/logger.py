@@ -3,13 +3,15 @@ Logging Configuration
 Sets up logging for the ETL pipeline
 """
 
-import logging
 import sys
-from pathlib import Path
+import logging
 from datetime import datetime
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
-from part2_pipeline.config import LOGS_DIR, LOG_LEVEL, LOG_FORMAT
+from efiche_data_engineer_assessment.part2_pipeline.config import (
+    LOGS_DIR,
+    LOG_LEVEL,
+    LOG_FORMAT,
+)
 
 
 def setup_logger(name, log_file=None):

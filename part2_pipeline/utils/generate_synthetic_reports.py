@@ -4,20 +4,23 @@ Creates realistic report text based on NIH diagnosis labels
 """
 
 import sys
-from pathlib import Path
 import pandas as pd
 import random
 from faker import Faker
 
-sys.path.insert(0, str(Path(__file__).parent))
-from part2_pipeline.config import DATA_DIR, NIH_SUBSET_NAME, NIH_TO_ICD10_MAPPING
-from part2_pipeline.utils.logger import setup_logger
+from efiche_data_engineer_assessment.part2_pipeline.config import (
+    DATA_DIR,
+    NIH_SUBSET_NAME,
+    NIH_TO_ICD10_MAPPING,
+)
+from efiche_data_engineer_assessment.part2_pipeline.utils.logger import setup_logger
 
 # Initialize
 fake = Faker()
 Faker.seed(42)
 random.seed(42)
 logger = setup_logger(__name__)
+
 
 
 class ReportGenerator:

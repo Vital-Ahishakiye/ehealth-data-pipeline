@@ -10,8 +10,8 @@ import psycopg2
 from psycopg2.extras import execute_batch
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from part2_pipeline.config import DB_CONFIG
-from part2_pipeline.utils.logger import PipelineLogger
+from efiche_data_engineer_assessment.part2_pipeline.config import DB_CONFIG
+from efiche_data_engineer_assessment.part2_pipeline.utils.logger import PipelineLogger
 
 
 class WarehouseETL:

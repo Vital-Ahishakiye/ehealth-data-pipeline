@@ -164,7 +164,6 @@ def generate_patients(cursor):
     print("\n👤 Generating Patients...")
     
     genders = ['M', 'F', 'Other']
-    ethnicities = ['Hutu', 'Tutsi', 'Twa', 'Other']
     languages = ['Kinyarwanda', 'English', 'French', 'Swahili']
     cities = ['Kigali', 'Butare', 'Gisenyi', 'Ruhengeri', 'Byumba', 'Cyangugu', 'Kibungo']
     states = ['Kigali Province', 'Eastern Province', 'Southern Province', 'Western Province', 'Northern Province']
@@ -177,27 +176,26 @@ def generate_patients(cursor):
         
         patient = (
             f"PAT{str(i+1).zfill(7)}",  # patient_id
-            dob.date(),  # date_of_birth
-            random.choice(genders),  # gender
-            random.choice(ethnicities),  # ethnicity
-            random.choice(languages),  # primary_language
-            fake.email(),  # contact_email
-            fake.phone_number()[:20],  # contact_phone
-            fake.street_address()[:200],  # address_line1
-            random.choice(cities),  # address_city
-            random.choice(states),  # address_state
-            fake.postcode()[:10],  # address_zipcode
+            dob.date(),                 # date_of_birth
+            random.choice(genders),     # gender
+            random.choice(languages),   # primary_language
+            fake.email(),               # contact_email
+            fake.phone_number()[:20],   # contact_phone
+            fake.street_address()[:200],# address_line1
+            random.choice(cities),      # address_city
+            random.choice(states),      # address_state
+            fake.postcode()[:10],       # address_zipcode
             random.choice(insurances),  # insurance_provider
             f"INS{random.randint(100000, 999999)}",  # insurance_id
-            True  # is_active
+            True                        # is_active
         )
         patients.append(patient)
     
     cursor.executemany("""
-        INSERT INTO patients (patient_id, date_of_birth, gender, ethnicity, primary_language,
+        INSERT INTO patients (patient_id, date_of_birth, gender, primary_language,
                              contact_email, contact_phone, address_line1, address_city, 
                              address_state, address_zipcode, insurance_provider, insurance_id, is_active)
-        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
     """, patients)
     
     print(f"  ✅ Generated {NUM_PATIENTS} patients")
@@ -469,7 +467,7 @@ def print_summary(cursor):
 def main():
     """Main execution"""
     print("\n" + "=" * 60)
-    print("🎲 eHealth - Synthetic Data Generation")
+    print("🎲 eFiche - Synthetic Data Generation")
     print("=" * 60)
     
     conn = None
